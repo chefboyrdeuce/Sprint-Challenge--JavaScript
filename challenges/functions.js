@@ -18,15 +18,15 @@ function consume(x, y, cb) {
 */
 
 const add = function(x,y){
-  return x + y;
+  console.log (x + y);
 }
 
 const multiply = function(x,y){
-  return x*y;
+  console.log (x*y);
 }
 
 const greeting = function(x,y){
-  return `Hello ${x} ${y}, nice to meet you!`;
+  console.log (`Hello ${x} ${y}, nice to meet you!`);
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -34,13 +34,12 @@ consume(2,2,add); // 4
 consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
-
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+// They're both within the scope of myFunction
 
 const external = "I'm outside the function";
 

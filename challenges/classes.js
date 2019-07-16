@@ -17,18 +17,6 @@ class CuboidMaker {
 
 const cuboid = new CuboidMaker(4,5,5);
 
-
-// function GameObject(attributes){ // function GameObject(name, dimensions) {
-//     this.createdAt = new Date(); //I'm assuming some sort of time method goes here
-//     this.name = attributes.name; 
-//     this.dimensions = attributes.dimensions;
-//     this.destroy = function() {
-//       return `${this.name} was removed from the game.` // string template
-//     };
-//   }
-
-
-
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130

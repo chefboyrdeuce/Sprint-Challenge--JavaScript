@@ -19,10 +19,6 @@ const tyrannosaurus = {
   }
   };
 
-  // fullName : function() {
-  //   return this.firstName + " " + this.lastName;
-  // };  
-
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 const stegosaurus = {  
@@ -81,9 +77,23 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
-const universities = graduates.map(x => x);
-console.log(universities)
+// const universities = graduates.map(x => x);
+// console.log(universities)
 
+// const data = [
+//   {"city":"seattle", "state":"WA", "population":652405, "land_area":83.9},
+//   {"city":"new york", "state":"NY", "population":8405837, "land_area":302.6},
+//   {"city":"boston", "state":"MA", "population":645966, "land_area":48.3},
+//   {"city":"kansas city", "state":"MO", "population":467007, "land_area":315}
+// ];
+
+const universities = graduates.map((element) => {
+  return element.university;
+});
+
+universities.sort();
+
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -94,7 +104,7 @@ Log the result of your new array. */
 
 const contactInfo = [];
 
-universities.forEach((student) => contactInfo.push(`${student["first_name"]} ${student["email"]}`))  
+graduates.forEach((student) => contactInfo.push(`${student["first_name"]} ${student["email"]}`))  
 
 console.log(contactInfo);
 
@@ -103,9 +113,9 @@ console.log(contactInfo);
 
 const uni = [];
 
-for(let i = 0; i < universities.length; i++) {
-  if(universities[i].university >= 'Uni') {
-    uni.push(universities[i]);
+for(let i = 0; i < graduates.length; i++) {
+  if(graduates[i].university.includes('Uni')) {
+    uni.push(graduates[i]);
   }
 }
 
